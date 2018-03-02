@@ -260,7 +260,7 @@ api.declare({
   }
   //send a pulse message 
   await this.publisher.hookCreated({hookGroupId, hookId});
-  pulselistener.createListener();
+  await pulselistener.createListener();
 
   // Reply with the hook definition
   return res.reply(hookDef);
